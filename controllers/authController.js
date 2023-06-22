@@ -2,6 +2,7 @@ import { StatusCodes } from "http-status-codes";
 import User from "../models/User.js";
 import { BadRequestError, UnauthenticatedError } from "../errors/index.js";
 import attachCookies from "../utils/attachCookies.js";
+import sendVerificationEmail from "../utils/sendVerificationEmail.js";
 
 const register = async (req, res) => {
   const { name, email, password } = req.body;
